@@ -36,7 +36,6 @@ class BenchMarkTest(unittest.TestCase):
             end = time.time()
             total = end - start
             self.bench_mark['http_client'].append(total)
-            # print("Total Time Elapsed for http.client", (end - start))
 
     def test_b_requests(self):
         for _ in range(self.NO_OF_TIMES):
@@ -47,7 +46,6 @@ class BenchMarkTest(unittest.TestCase):
             end = time.time()
             total = end - start
             self.bench_mark['requests'].append(total)
-            # print("Total Time Elapsed for requests", (end - start))
 
     def test_c_grequests(self):
         for _ in range(self.NO_OF_TIMES):
@@ -58,7 +56,6 @@ class BenchMarkTest(unittest.TestCase):
             end = time.time()
             total = end - start
             self.bench_mark['grequests'].append(total)
-            # print("Total Time Elapsed for grequests", (end - start))
 
     def test_d_urllib(self):
         for _ in range(self.NO_OF_TIMES):
@@ -69,7 +66,6 @@ class BenchMarkTest(unittest.TestCase):
             end = time.time()
             total = end - start
             self.bench_mark['urllib'].append(total)
-            # print("Total Time Elapsed for urllib", (end - start))
 
     def test_e_response(self):
         for i in range(0, self.NO_OF_TIMES + 1):
